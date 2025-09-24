@@ -106,4 +106,19 @@
     padding-top: 5%;
 }
 
+.grid3{
+    padding-top: 10%;
+    padding-left: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+}
+.grid3 img{
+    width: 100%;
+}
+.grey{
+    background: grey;
+    
+}
+
 
