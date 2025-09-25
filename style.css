@@ -133,4 +133,29 @@ li a{
     
 }
 
+.icon-cart{
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: right;
+    padding-top: 10px;
+    padding-left: 20%;
+   
+}
+
+.icon-cart span{
+    position: absolute;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    left: 90%;
+    top: 7%;
+
+}
+
 
