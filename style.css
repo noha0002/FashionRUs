@@ -51,12 +51,14 @@ li a{
     padding-left: 10%;
 }
 
+
 .flex-container img {
-    width: 100%;
-    height: 300px; 
-    object-fit: cover; 
-   
+  width: 100%;
+  height: auto;         
+  max-height: 300px;    
+  object-fit: contain;  
 }
+
 
 .rabat-container{
     position: relative;
@@ -65,7 +67,7 @@ li a{
 .rabat{
     position: absolute;
     left: 70%; 
-    bottom: 10%; 
+    bottom: 100%; 
     background: red;
     color: white;
     padding: 10px;
@@ -80,8 +82,8 @@ li a{
 }
 .sold {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0;
+  left: 28px;
   background: rgb(101, 97, 97);
   color: white;
   padding: 10px 10px;
@@ -133,29 +135,6 @@ li a{
     
 }
 
-.icon-cart{
-    width: 900px;
-    max-width: 90vw;
-    margin: auto;
-    text-align: right;
-    padding-top: 10px;
-    padding-left: 20%;
-   
-}
 
-.icon-cart span{
-    position: absolute;
-    background-color: red;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: #fff;
-    left: 90%;
-    top: 7%;
-
-}
 
 

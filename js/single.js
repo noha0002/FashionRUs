@@ -1,41 +1,41 @@
-
 const productContainer = document.querySelector("#productContainer");
-fetch("https://kea-alt-del.dk/t7/api/products/1163")
-    .then(res => res.json()) 
-    .then(product =>{
-        console.log(product.articletype);
-    })
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
-    console.log(id);
-productContainer.innerHTML = `
-<section class="grid3">
-  <img src="img/fodbold1.png" alt=""> 
-  <div>
-    <h2 class="stor1">Product Information</h2>
-    <h2 class="stor2">Model Name</h2>
-    <p>Sahara Team India Fawner Round Neck Jersey</p>
-    <h2 class="stor2">Color</h2>
-    <p>Blue</p>
-    <h2 class="stor2">Inventory Number</h2>
-    <p>1163</p>
-    <h1>NIKE</h1>
-    <p>Nike, creating experiences for today's athlete</p>
-  </div>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
 
-  <form class="grey">
-    <h1>Sahara Team India Fawner Round Neck Jersey</h1>
-    <p>Nike Tshirts</p>
+fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
+  .then((res) => res.json())
+  .then((product) => {
+    console.log(product.articletype);
 
-    <label for="size">Choose a size:</label>
-    <select id="size">
-      <option value="">Select</option>
-      <option value="small">Small</option>
-      <option value="medium">Medium</option>
-      <option value="large">Large</option>
-    </select>
+    productContainer.innerHTML = `
+      <section class="grid3">
+        <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt=""> 
+        <div>
+          <h2 class="stor1">Product Information</h2>
+          <h2 class="stor2">Model Name</h2>
+          <p>${product.productdisplayname}</p>
+          <h2 class="stor2">Color</h2>
+          <p>${product.color}</p>
+          <h2 class="stor2">Inventory Number</h2>
+          <p>${product.id}</p>
+          <h1>${product.brandname}</h1>
+          <p>${product.brandname}, creating experiences for today's athlete</p>
+        </div>
 
-    <button type="button" id="addToCart">Put in basket</button>
-  </form>
-</section>
-`;
+        <form class="grey">
+          <h1>${product.productdisplayname}</h1>
+          <p>${product.articletype}</p>
+
+          <label for="size">Choose a size:</label>
+          <select id="size">
+            <option value="">Select</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+
+          <button type="button" id="addToCart">Put in basket</button>
+        </form>
+      </section>
+    `;
+  });
