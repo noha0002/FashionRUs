@@ -1,4 +1,5 @@
 
+/* header liste */
 ul li{
     display: inline;
     margin-right: 20px;
@@ -11,21 +12,17 @@ li a{
 
 
 
-
-.container{
-   padding: 4% 0 0 20%;
-}
-
+/* Index grid /////////////////////////////////////////////////////*/
 .grid{
    padding-top: 2%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     width: 80%;
+    padding-left: 10%;
+   
    
 }
-
-
 .grid p {
   background-color: #ccc; 
   padding: 30px;
@@ -33,92 +30,87 @@ li a{
    
    
 }
-
-.grid p a {
-    color: white;
-    text-decoration: none;
-  display: block;   
-  width: 100%;      
-  height: 100%;
+.container1{
+    padding-top: 5%;
+    
 }
+.ch1{
+    padding-left: 12%;
+    font-size: 40px;
+    }
 
-.flex-container {
-    padding-top: 2%;
+/*  produktliste grid //////////////////////////////////////////////////////// */
+
+.container{
+    padding-top: 10%;
+    padding-left: 12%;
     display: flex;
     flex-direction: row;
-    gap: 20px;
     width: 80%;
-    padding-left: 10%;
+    gap: 20px;
+    
 }
-
-
-.flex-container img {
-  width: 100%;
-  height: auto;         
-  max-height: 300px;    
-  object-fit: contain;  
-}
-
-
-.rabat-container{
-    position: relative;
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
    
 }
-.rabat{
+
+article img{
+    width: 100%;
+    position: relative;
+}
+/* sold tags / edit */
+.sold{
     position: absolute;
-    left: 70%; 
-    bottom: 100%; 
-    background: red;
+    background-color: black;
     color: white;
     padding: 10px;
-    font-weight: bold;
-}
-.image-container {
-  position: relative;
- 
-}
-.imggrey{
-    filter:brightness(70%)
-}
-.sold {
-  position: absolute;
-  top: 0;
-  left: 28px;
-  background: rgb(101, 97, 97);
-  color: white;
-  padding: 10px 10px;
-  font-weight: bold;
-}
-
-
-
-.rykke-container{
-    padding-top: 5%;
-}
-
-.nike{
-    font-size: 5vh;
-}
-.nike-text1 {
-    color: lightgray;
+    top: 28%;
+    left: 54%;
     
 }
-
-.nike-text {
-    padding-top: 50px;
-    color: lightgray;
+.sold1{
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    top: 28%;
+    left: 75%;
     
 }
-.read-more{
+.sold-edit{
+    filter: brightness(50%);
+}
+/* mine røde bokse */
+
+.tilbud{
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    top: 90%;
+    left: 65%;
+}
+.tilbud1{
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    top: 90%;
+    left: 85%;
+}
+/* p dekoration */
+.underline{
     text-decoration: underline;
 }
-
-.wrap{
-	white-space: pre-wrap;
-    max-width: 200px;
-    width: 380px;
-    padding-top: 5%;
+a{
+    text-decoration: none;
+    color: black;
 }
+
+/* Produkt.html ////////////////////////////////////////////// */
 
 .grid3{
     padding-top: 10%;
@@ -134,7 +126,3 @@ li a{
     background: grey;
     
 }
-
-
-
-

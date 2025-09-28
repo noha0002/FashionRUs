@@ -2,11 +2,11 @@ const productContainer = document.querySelector("#productContainer");
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
+fetch(`https://kea-alt-del.dk/t7/api/products/1163.webp`)
   .then((res) => res.json())
   .then((product) => {
     console.log(product.articletype);
-
+    function showProduct(product) {}
     productContainer.innerHTML = `
       <section class="grid3">
         <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt=""> 
