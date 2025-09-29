@@ -9,7 +9,7 @@ function showCategories(categories) {
   categories.forEach((category) => {
     categorylist.innerHTML += `
       
-        <a href="produktlist.html?category=${category.category}">
+        <a href="produktlist.html?category=${category.category}">${category.category}
         </a>
       `;
   });

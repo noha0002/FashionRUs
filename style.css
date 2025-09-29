@@ -1,128 +1,116 @@
-
 /* header liste */
-ul li{
-    display: inline;
-    margin-right: 20px;
-    font-size: 18px;
+ul li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 18px;
 }
-li a{
-    text-decoration: none;
-    color: black;
+li a {
+  text-decoration: none;
+  color: black;
 }
-
-
 
 /* Index grid /////////////////////////////////////////////////////*/
-.categorylist{
-   padding-top: 2%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 80%;
-    padding-left: 10%;
-   
-   
+.categorylist {
+  padding-top: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 80%;
+  padding-left: 10%;
 }
-.categorylist p {
-  background-color: #ccc; 
+.categorylist a {
+  background-color: #ccc;
   padding: 30px;
-   display: block;
-   
-   
+  display: block;
 }
-.container1{
-    padding-top: 5%;
-    
+.container1 {
+  padding-top: 5%;
 }
-.ch1{
-    padding-left: 12%;
-    font-size: 40px;
-    }
+.ch1 {
+  padding-left: 12%;
+  font-size: 40px;
+}
 
 /*  produktliste grid //////////////////////////////////////////////////////// */
 
-.container{
-    padding-top: 10%;
-    padding-left: 12%;
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    gap: 20px;
-    
+.container {
+  padding-top: 10%;
+  padding-left: 12%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+  width: 80%;
+  gap: 20px;
 }
 article {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-   
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-article img{
-    width: 100%;
-    position: relative;
+article img {
+  width: 100%;
+  position: relative;
 }
 /* sold tags / edit */
-.sold{
-    position: absolute;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    top: 28%;
-    left: 54%;
-    
+.sold {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  top: 28%;
+  left: 54%;
 }
-.sold1{
-    position: absolute;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    top: 28%;
-    left: 75%;
-    
+.sold1 {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  top: 28%;
+  left: 75%;
 }
-.sold-edit{
-    filter: brightness(50%);
+.sold-edit {
+  filter: brightness(50%);
 }
 /* mine røde bokse */
 
-.tilbud{
-    position: absolute;
-    background-color: red;
-    color: white;
-    padding: 10px;
-    top: 90%;
-    left: 65%;
+.tilbud {
+  position: absolute;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  top: 90%;
+  left: 65%;
 }
-.tilbud1{
-    position: absolute;
-    background-color: red;
-    color: white;
-    padding: 10px;
-    top: 90%;
-    left: 85%;
+.tilbud1 {
+  position: absolute;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  top: 90%;
+  left: 85%;
 }
 /* p dekoration */
-.underline{
-    text-decoration: underline;
+.underline {
+  text-decoration: underline;
 }
-a{
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /* Produkt.html ////////////////////////////////////////////// */
 
-.grid3{
-    padding-top: 10%;
-    padding-left: 5%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 90%;
+.grid3 {
+  padding-top: 10%;
+  padding-left: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
 }
-.grid3 img{
-    width: 100%;
+.grid3 img {
+  width: 100%;
 }
-.grey{
-    background: grey;
-    
+.grey {
+  background: grey;
 }
