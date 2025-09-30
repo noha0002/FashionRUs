@@ -2,16 +2,42 @@ const productListContainer = document.querySelector(".container");
 const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
 
+document
+  .querySelectorAll("#filters button")
+  .forEach((knap) => knap.addEventListener("click", showFiltered));
 
-fetch(`https://kea-alt-del.dk/t7/api/products?limit=20&category=${category}`) /* nu har jeg bedt om de første 20 kategorier*/
+function showFiltered() {
+  console.log("showFiltered");
+}
+
+let allData;
+fetch(`https://kea-alt-del.dk/t7/api/products?limit=20&category=${category}`)
   .then((response) => response.json())
-  .then((products) => showProducts(products));
+  .then((json) => {
+    allData = json;
+    showProducts(allData);
+  });
+  
+  function showFiltered() {
+    
+    const filter = this.dataset.gender;
+    if (filter == "All") {
+      showProducts(allData);
+    } else {
+      fraction = allData.filter((product) => product.gender == filter);
+      showProducts(fraction);
+    }
+  }
+
+// fetch(
+//   `https://kea-alt-del.dk/t7/api/products?limit=20&category=${category}`
+// ) /* nu har jeg bedt om de første 20 kategorier*/
+//   .then((response) => response.json())
+//   .then((products) => showProducts(products));
 
 function showProducts(products) {
-  console.log(products);
+  productListContainer.innerHTML = "";
   products.forEach((element) => {
-    console.log(element);
-
     productListContainer.innerHTML += `
       <article class="udsolgt">
          <img class="sold-edit" 
@@ -29,6 +55,7 @@ function showProducts(products) {
        
 
     </article
+    
     `;
   });
 }
