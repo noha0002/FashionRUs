@@ -18,7 +18,8 @@ function showProducts(products) {
          src="https://kea-alt-del.dk/t7/images/webp/640/${element.id}.webp" alt="">
 
          <h2>${element.productdisplayname}</h2>
-        <p>Tshirts i Nike</p>
+         <p>${element.brandname}</p>
+        <p>${element.articletype}</p>
         <p > Prev. DKK 1595,-</p>
         <p >Now Prev. DKK 1595,-</p> 
 
