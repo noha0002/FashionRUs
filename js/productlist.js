@@ -18,6 +18,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products?limit=20&category=${category}`)
     showProducts(allData);
   });
   
+  
   function showFiltered() {
     
     const filter = this.dataset.gender;
@@ -28,6 +29,37 @@ fetch(`https://kea-alt-del.dk/t7/api/products?limit=20&category=${category}`)
       showProducts(fraction);
     }
   }
+
+document.querySelector("#filters").addEventListener("click", showFiltered);
+document.querySelector("#sorting").addEventListener("click", showSorted);
+
+function showSorted(event) {
+  const direction = event.target.dataset.direction;
+
+  if (direction == "lohi") {
+    allData.sort((a, b) => a.price - b.price); 
+  } else {
+    allData.sort((a, b) => b.price - a.price); 
+  }
+  showProducts(allData);
+}
+
+function showFiltered(event) {
+  const gender = event.target.dataset.gender;
+
+  if (gender == "All") {
+    showProducts(allData);
+  } else {
+    const udsnit = allData.filter((product) => product.gender == gender);
+    showProducts(udsnit);
+  }
+}
+
+
+
+
+
+
 
 // fetch(
 //   `https://kea-alt-del.dk/t7/api/products?limit=20&category=${category}`
